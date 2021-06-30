@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SafeToEat</string>
+    <string name="welcomeTV">SafeToEat</string>
+    <string name="signInToContinue">Sign in to continue</string>
+    <string name="signOutButton">Sign Out</string>
+    <!--    <string name="default_web_client_id" translatable="false">631179317739-gec5rfmmskafpmi8k3nuql3372li9iah.apps.googleusercontent.com</string>-->
+</resources>
