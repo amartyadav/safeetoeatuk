@@ -41,17 +41,4 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/bottom_nav_graph" />
 
-
-    <!--    <Button-->
-<!--        android:id="@+id/signOutButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="80dp"-->
-<!--        android:text="@string/signOutButton"-->
-<!--        android:textSize="18sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
