@@ -95,5 +95,7 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--    <string name="default_web_client_id" translatable="false">631179317739-gec5rfmmskafpmi8k3nuql3372li9iah.apps.googleusercontent.com</string>-->
 </resources>
