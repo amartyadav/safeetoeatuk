@@ -6,6 +6,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_search">Search</string>
     <string name="menu_profile">Profile</string>
+    <string name="browse">Browse</string>
+    <string name="search_near_me_explained">Search for safety ratings of the restaurant near you</string>
+    <string name="search_by_proximity">Near You</string>
+    <string name="ratings">Ratings</string>
+    <string name="rating_decoded">Understand what the ratings mean</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
