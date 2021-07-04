@@ -11,6 +11,7 @@
     <string name="search_by_proximity">Near You</string>
     <string name="ratings">Ratings</string>
     <string name="rating_decoded">Understand what the ratings mean</string>
+    <string name="you_are_in">You are in: </string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
