@@ -91,7 +91,7 @@ public class HomeResults extends AppCompatActivity {
     }
 
     private void requestLocationPermission() {
-        TextView tv_location = findViewById(R.id.tv_you_are_in);
+//        TextView tv_location = findViewById(R.id.tv_you_are_in);
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -105,7 +105,7 @@ public class HomeResults extends AppCompatActivity {
                 if(location != null) {
                     wayLatitude = location.getLatitude();
                     wayLongitude = location.getLongitude();
-                    tv_location.setText(String.format(Locale.UK, "%s -- %s", wayLatitude, wayLongitude));
+//                    tv_location.setText(String.format(Locale.UK, "%s -- %s", wayLatitude, wayLongitude));
                     Log.d("SafeToEat", wayLatitude + " " + wayLongitude);
                     getRestaurantInfo();
                 }
@@ -118,7 +118,7 @@ public class HomeResults extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        TextView tv_location = findViewById(R.id.tv_you_are_in);
+//        TextView tv_location = findViewById(R.id.tv_you_are_in);
 
         switch(requestCode) {
             case 1000: {
@@ -128,7 +128,7 @@ public class HomeResults extends AppCompatActivity {
                         if(location != null) {
                             wayLatitude = location.getLatitude();
                             wayLongitude = location.getLongitude();
-                            tv_location.setText(String.format(Locale.UK, "%s -- %s", wayLatitude, wayLongitude));
+//                            tv_location.setText(String.format(Locale.UK, "%s -- %s", wayLatitude, wayLongitude));
                             Log.d("SafeToEat", wayLatitude + " " + wayLongitude);
                             getRestaurantInfo();
                         }
@@ -155,7 +155,7 @@ public class HomeResults extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        TextView tv_results = findViewById(R.id.tv_results);
+//        TextView tv_results = findViewById(R.id.tv_results);
         // below URL is for actual user location. Currently using hardcoded Aberdeen's Union Street's lats and longs
 //        String url = "https://api.ratings.food.gov.uk/Establishments?latitude="+wayLatitude+"&longitude="+wayLongitude+"&maxDistanceLimit=5";
 
@@ -175,13 +175,13 @@ public class HomeResults extends AppCompatActivity {
                             for (int i = 0, j = jsonArrayResults.length(); i < j; i++) {
                                 JSONObject restaurant = jsonArrayResults.getJSONObject(i);
                                 businessNames.add(restaurant.getString("BusinessName"));
-                                businessAddress.add(restaurant.getString("AddressLine1") + restaurant.getString("AddressLine2") + restaurant.getString("AddressLine3") + restaurant.getString("AddressLine4"));
+                                businessAddress.add("\n" + restaurant.getString("AddressLine1") + "\n" + restaurant.getString("AddressLine2") + "\n" + restaurant.getString("AddressLine3") + "\n" +  restaurant.getString("AddressLine4")  + "\n");
                                 businessTypes.add(restaurant.getString("BusinessType"));
-                                businessRatings.add(restaurant.getString("RatingValue"));
-                                localAuthorityName.add(restaurant.getString("LocalAuthorityName"));
-                                localAuthorityEmail.add(restaurant.getString("LocalAuthorityEmailAddress"));
-                                localAuthorityWebsite.add(restaurant.getString("LocalAuthorityWebSite"));
-//                                Log.d("SafeToEat", restaurant.getString("BusinessName"));
+                                businessRatings.add(restaurant.getString("RatingValue")+ "\n");
+                                localAuthorityName.add(restaurant.getString("LocalAuthorityName")+ "\n");
+                                localAuthorityEmail.add(restaurant.getString("LocalAuthorityEmailAddress")+ "\n");
+                                localAuthorityWebsite.add(restaurant.getString("LocalAuthorityWebSite")+ "\n");
+                                Log.d("SafeToEat", restaurant.getString("BusinessName"));
                             }
 
                             //converting arrayLists to arrays
@@ -211,7 +211,7 @@ public class HomeResults extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        tv_results.setText(error.getMessage());
+//                        tv_results.setText(error.getMessage());
 //                        Log.d("SafeToEat", error.getMessage());
                     }
                 })
